@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PROFILE CARD</title>
+<meta charset="utf-9">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type ="text/css" href="STYLE.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript">
+function toggle()
+ {
+  var x = document.getElementById("changes");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } 
+  else {
+    x.style.display = "block";
+  }
+}
+function validation(){
+  var x=document.getElementById("number").value;
+     if(isNaN(x)||x.indexOf(" ")!=-1)
+   {
+     alert("Enter Numeric Value")
+     return false; 
+   }
+   if (x.length!=10)
+   {
+     alert("Enter 10 Characters for number");
+     return false;
+   }
+   document.getElementById("num").innerHTML =document.getElementById("number").value;
+    var y= document.getElementById("email").value;
+  var pos_at = y.indexOf("@");
+  var pos_dot = y.lastIndexOf(".");
+  if (pos_at<1 || pos_dot<pos_at+2 || pos_dot+2>=x.length) {
+    alert("Not a valid e-mail address");
+    return false;
+  }
+  
+   document.getElementById("mail").innerHTML =document.getElementById("email").value;
+ }
+</script>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">PROFILE</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ <div class="collapse navbar-collapse" id="navbarContent">  
+
+    <ul class="navbar-nav mr-auto">
+   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT </a>
+        <div class="dropdown-menu" aria-labelledby="Dropdown">
+          <a class="dropdown-item details" href="https://en.wikipedia.org/wiki/Dwarkadas_J._Sanghvi_College_of_Engineering" > Dwarkadas J. Sanghvi College Of Engineering</a>
+		   <div class="dropdown-divider"></div>
+          <a class="dropdown-item details" href="#info" data-toggle="collapse">Web Development</a>
+          </div>
+          </li>	
+</ul>		  
+
+ 
+  <form class="form-group form-inline my-2 my-lg-0">
+   
+	<input class="form-control mr-sm-2"  type="button" value="EDIT"  onclick="toggle()"/>
+    <input class="form-control mr-sm-2"  type="button" value="UPDATE" onClick="validation();toggle()" />
+  </form>
+  </div>
+</nav>
+	<div class="row">
+		<div class="col-lg-4 col-sm-6">
+
+           <div class="card  " style=" border-radius : 7px; margin : auto;box-shadow: 0px 5px 10px 8px #888888;transform:translateY(5%)">
+                <div class="card-header" style="background:#a07eab ">               
+                <div class="photo">
+                    <img src="download.jpg" class="img-fluid " />
+                </div>			
+				 </div>
+				 </br>
+				  <div class=" secondhalf">
+				         <h1 > Deep Nanda</h1>
+<h3><a href="#demo" data-toggle="collapse"> Full Stack Web Developer</a></h3>
+ <div class="details">
+	  <i class="fa fa-calendar" ></i> <span class="ttip">: 30/01/2001 <span class="ttext">Date of birth</span></span></br></br>
+	  <i class="fa fa-home" ></i><span> : Dwarkadas J. Sanghvi College Of Engineering</span></br></br>
+	  <i class="fa fa-phone"  ></i> :<span id="num"> 9988776655</span></br></br>
+	  <i class="fa fa-envelope" ></i> :<span id="mail"> abc@gmail.com</span></br></br>
+  <div class="change" id="changes">
+     <form class="form-group" >
+ 	  <i class="fa fa-phone"></i> : <input type="text" placeholder="Enter Mobile Number"  name="number" id="number" required/></br></br>
+	  <i class="fa fa-envelope"></i> : <input type="email" placeholder="Enter Email Address"   name="mail" id="email" required/></p>
+	 </form> 
+
+</div>
+
+</div>
+   </br></br><hr>
+<div class="links">
+    <a href="https://www.instagram.com"><i class="fa fa-instagram" style="font-size:15px;color:#631563"></i></a> 
+    <a href="https://twitter.com"><i class="fa fa-twitter" style="font-size:15px;color:#631563"></i></a>  
+    <a href="https://www.facebook.com"><i class="fa fa-facebook" style="font-size:15px;color:#631563"></i></a> 
+</div> 
+</div>
+ </div>
+</div> 
+
+ <div class="col-md-8 col-md-offset-3 col-sm-6">
+ <div id="demo" class="collapse">
+  <div class="jumbotron">
+ A full stack web developer is a person who can develop both client and server software.
+
+In addition to mastering HTML and CSS, he/she also knows how to:</br>
+
+-> Program a browser (like using JavaScript, jQuery, Angular, or Vue)</br>
+-> Program a server (like using PHP, ASP, Python, or Node)</br>
+-> Program a database (like using SQL, SQLite, or MongoDB)
+ </div>
+ <div id="info" class=" jumbotron collapse">
+ Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).
+ Web development can range from developing a simple single static page of plain text to complex web-based internet applications (web apps),
+ electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include
+ web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.
+ </div>
+</div>
+</div> 
+</div> 
+</div>				                
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
